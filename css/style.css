@@ -1,9 +1,228 @@
+/******* COLOR PALETTE *******
+
+Primary-Blue: rgb(24, 49, 91)
+Gray: rgb(214, 214, 214)
+
+*****************************/
+
 *{
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  border-box: 0;
 }
 
 html {
   font-size: 62.5%;
+  overflow-x:hidden;
+}
+
+body{
+  font: normal 400 1.2rem mr-eaves-xl-modern, sans-serif;
+}
+
+/****************************
+        LANDING PAGE
+****************************/
+
+.landing_page--header{
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(24, 49, 91, 0.53), rgba(24, 49, 91, 0.71)), url(../images/blue_angels_fat_albert.jpg);
+  background-size: cover;
+  background-position: 85% 40%;;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.navigation{
+  background: white;
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container{
+  padding: 5% 0 5% 5%;
+}
+
+.logo {
+  max-width: 60%;
+  display: block;
+}
+
+ul{
+  list-style: none;
+  padding: 5% 5% 5% 0;
+}
+
+.mobile{
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+
+.desktop{
+  display: none;
+}
+
+li:not(:last-child){
+  padding-bottom: 5%;
+}
+
+
+li{
+  display: inline-block;
+}
+
+li a:link, a:visited{
+  text-decoration: none;
+  color: inherit;
+  font-family: sweet-square-pro, sans-serif;
+  font-size: 2.5rem;
+}
+.burger {
+  width: 7rem;
+  height: 5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 100%;
+  z-index: 101;
+  background: transparent;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.burger span{
+  position: relative;
+  margin-top: .9rem;
+  margin-bottom: .9rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -1.5px;
+}
+.burger span, .burger span::before, .burger span::after {
+  display: block;
+  width: 3.2rem;
+  height: .4rem;
+  background-color: rgb(24, 49, 91);
+  transition-duration: 0.3s;
+}
+.burger span::before, .burger span::after {
+  position: absolute;
+  content: "";
+}
+.burger span::before {
+  top: -9px;
+}
+.burger span::after {
+  top: 9px;
+}
+.burger.clicked span {
+  background-color: transparent;
+}
+.burger.clicked span::before {
+  transform: translateY(9px) rotate(45deg);
+}
+.burger.clicked span::after {
+  transform: translateY(-9px) rotate(-45deg);
+}
+.burger.clicked span:before, .burger.clicked span:after {
+  background-color: rgb(255, 255, 255);
+}
+
+.mobile-menu {
+	z-index: 100;
+  background-color: rgba(24, 49, 91);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 80px 0;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.mobile-menu.show {
+  transform: translateX(0px);
+}
+.mobile-menu.show ul li.mobile-links {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.mobile-menu ul li.mobile-links {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0px 40px;
+}
+.mobile-menu ul li.mobile-links {
+  margin-bottom: 10px;
+  transform: translateX(40px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.mobile-menu ul li.mobile-links:last-of-type {
+  margin-bottom: 0px;
+}
+/****************************
+        MEDIA QUERIES
+****************************/
+
+@media(min-width: 942px){
+
+  .logo{
+    max-width: 80%;
+  }
+
+  .logo-container{
+    padding-top: 4%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+  }
+
+  .mobile{
+    display: none;
+  }
+
+  .burger{
+    display: none;
+  }
+
+  ul{
+    list-style: none;
+    padding: 5% 2% 1% 0;
+  }
+
+  li a:link, a:visited{
+    font-size: 2rem;
+  }
+
+  li:not(:last-child){
+    padding-right: 3.5%;
+    padding-bottom: 5%;
+  }
+
+  .desktop{
+    display: flex;
+    width: 50%;
+    flex-basis: 70%;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1199px){
+  .logo{
+    max-width: 100%;
+  }
+
+  li a:link, a:visited{
+    font-size: 2.7rem;
+  }
 }
