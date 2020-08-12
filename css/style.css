@@ -57,7 +57,7 @@ a:link, a:visited{
   display: block;
 }
 
-ul{
+ul .desktop{
   list-style: none;
   padding: 5% 5% 5% 0;
 }
@@ -71,11 +71,6 @@ ul{
 .desktop{
   display: none;
 }
-
-li:not(:last-child){
-  padding-bottom: 5%;
-}
-
 
 li{
   display: inline-block;
@@ -338,14 +333,23 @@ a.button:link, a.button:visited{
   color: rgb(255, 214, 97);
 }
 
-.footer-container{
-  background:rgb(214, 214, 214);
+.footer-container {
+  background: rgb(214, 214, 214);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0 0;
 }
 
 .footer-container ul{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3rem 0;
+}
+
+.footer-container li{
+  padding: .2rem 0;
 }
 
 a.footer-links:link, a.footer-links:visited{
@@ -364,6 +368,21 @@ a.footer-links:link, a.footer-links:visited{
   .tagline{
     padding-top: 4rem;
     font: normal 400 2.8rem sweet-square-pro, sans-serif;
+  }
+
+  .footer-container ul{
+    display: flex;
+    max-width: 35rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2% 0;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .footer-container li{
+    padding: .2rem 1rem;
   }
 }
 
@@ -446,11 +465,25 @@ a.footer-links:link, a.footer-links:visited{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20%;
   }
   .feature-box {
       margin: 1%;
       padding: 2% 2%;
+  }
+
+  .footer-container ul{
+    display: flex;
+    max-width: unset;
+    flex-direction: row;
+    flex-wrap: no;
+    align-items: center;
+    padding: 2% 0;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .footer-container li{
+    padding: .2rem 1rem;
   }
 }
 
@@ -478,17 +511,12 @@ a.footer-links:link, a.footer-links:visited{
     display: none;
   }
 
-  ul{
-    list-style: none;
-    padding: 5% 2% 1% 0;
-  }
-
  li a.desktop-links:link, a.desktop-link:visited{
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: rgb(24, 49, 91);
   }
 
-  li:not(:last-child){
+  .desktop li:not(:last-child){
     padding-right: 3.5%;
     padding-bottom: 5%;
   }
@@ -498,6 +526,8 @@ a.footer-links:link, a.footer-links:visited{
     width: 50%;
     flex-basis: 70%;
     justify-content: flex-end;
+    list-style: none;
+    padding: 5% 2% 1% 0;
   }
 
   .header_textbox{
@@ -571,5 +601,9 @@ a.footer-links:link, a.footer-links:visited{
     z-index: -99;
     top: -18rem;
     left: -8rem;
+  }
+
+  .featured{
+    margin-top: 17%;
   }
 }
