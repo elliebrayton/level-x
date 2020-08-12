@@ -7,6 +7,7 @@
 		<title>Level X</title>
     <!-- STYLESHEETS -->
 		<link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="icofont.min.css">
     <!-- FONTS -->
     <link rel="stylesheet" href="https://use.typekit.net/wvo2pey.css">
 		<!-- JQUERY -->
@@ -31,21 +32,83 @@
           <li class="mobile-links"><a href="#">Contacts</a></li>
         </ul>
         <ul class="desktop">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Training & Education</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Logistics</a></li>
-          <li><a href="#">Contacts</a></li>
+          <li><a class="desktop-links" href="#">About</a></li>
+          <li><a class="desktop-links" href="#">Training & Education</a></li>
+          <li><a class="desktop-links" href="#">Services</a></li>
+          <li><a class="desktop-links" href="#">Logistics</a></li>
+          <li><a class="desktop-links" href="#">Contacts</a></li>
         </ul>
       </nav>
-      <h1>RAPID RELEVANT RELIABLE</h1>
-      <span class="tagline">We don’t just aim to educate. We’re Forging Dynamic Training Solutions for the Modern Day Warfighter.</span>
+      <div class="header_textbox">
+        <h1>RAPID <br>RELEVANT <br>RELIABLE</h1>
+        <span class="tagline">We don’t just aim to educate. We’re Forging Dynamic Training Solutions for the Modern Day Warfighter.</span>
+      </div>
     </header>
     <main>
-      <section>
-        <h2>Solutions built with a purpose</h2>
-        <p>Level X Technologies, Inc. empowers our customers by providing tailored solutions for the most complex training, logistics and services needs. Headquartered in Washington, DC, Level X Technologies brings the agility and customer intimacy of a small business with the capabilities needed to deliver solutions globally.</p>
+      <section class="section">
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="about--box">
+              <h2>Solutions built with a purpose</h2>
+              <p>Level X Technologies, Inc. empowers our customers by providing tailored solutions for the most complex training, logistics and services needs. Headquartered in Washington, DC, Level X Technologies brings the agility and customer intimacy of a small business with the capabilities needed to deliver solutions globally.</p>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <div class="image-container">
+              <img src="images/Military.jpg" alt="female-soldier">
+            </div>
+            <div class="decoration-container--two">
+              <img src="images/decoration_two.png" alt="decoration_two">
+            </div>
+          </div>
+        </div>
+        <div class="decoration-container">
+          <img class="decoration" src="images/decoration_one.png" alt="decoration">
+        </div>
       </section>
+      <section class="section featured">
+        <div class="feature-box">
+          <div class="upper">
+            <h3>Training</h3>
+            <i class="feature-box--icon icofont-world"></i>
+            <p>We create advanced training solutions for human-driven occupations. Level X Technologies, Inc. is a mission-focused partner, and determined to design, develop, and deliver the most efficient training solutions to accelerate workforce competencies for your organization.</p>
+          </div>
+          <p><a class="box-links" href="#">Learn More</a></p>
+        </div>
+        <div class="feature-box">
+          <div class="upper">
+          <h3>Services</h3>
+          <i class="feature-box--icon icofont-chart-histogram"></i>
+          <p>Level X Technologies, Inc. provides your organization with the confidence to manage both short- and long-range operational goals. Emphasizing our ethos of “rapid, relevant, reliable,” we provide innovative solutions and critical thinking coupled with disciplined approaches to elevate an organization’s readiness.</p>
+          </div>
+          <p><a class="box-links" href="#">Learn More</a></p>
+        </div>
+        <div class="feature-box">
+          <div class="upper">
+          <h3>Logistics</h3>
+          <i class="feature-box--icon icofont-hat-alt"></i>
+          <p>Level X Technologies, Inc. focuses on outcomes of logistics for reliable operations and sustainment with properly planned and executed supply chain management. In our experience, being at the point of impact means nothing without the ability to think critically, prepare soundly, and execute with discipline and speed. At Level X Technologies, disciplined execution is part of our DNA!</p>
+          </div>
+          <p><a class="box-links" href="#">Learn More</a></p>
+        </div>
+      </section>
+      <section class="section">
+        <p class="text">DUNS</p>
+        <p class="text">080998914</p>
+        <a class="button" href="#">Learn More</a>
+      </section>
+      <footer class="footer">
+        <div class="footer-container">
+          <ul>
+            <li><a class="footer-links" href="#">About</a></li>
+            <li><a class="footer-links" href="#">Training & Education</a></li>
+            <li><a class="footer-links" href="#">Services</a></li>
+            <li><a class="footer-links" href="#">Logistics</a></li>
+            <li><a class="footer-links" href="#">Contacts</a></li>
+            <li><a class="footer-links" href="#">careers</a></li>
+          </ul>
+        </div>
+      </footer>
     </main>
     <script src="js/main.js"></script>
 	</body>

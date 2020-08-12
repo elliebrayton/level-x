@@ -2,6 +2,8 @@
 
 Primary-Blue: rgb(24, 49, 91)
 Gray: rgb(214, 214, 214)
+Yellow: rgb(255, 214, 97)
+Cark Yellow: rgb(187, 156, 68)
 
 *****************************/
 
@@ -18,6 +20,11 @@ html {
 
 body{
   font: normal 400 1.2rem mr-eaves-xl-modern, sans-serif;
+  overflow-x:hidden;
+}
+
+a:link, a:visited{
+  text-decoration: none;
 }
 
 /****************************
@@ -171,11 +178,286 @@ li a:link, a:visited{
 .mobile-menu ul li.mobile-links:last-of-type {
   margin-bottom: 0px;
 }
+
+.header_textbox{
+  position: absolute;
+  min-width: calc(100% - 20%);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+h1{
+  font: normal 400 3.5rem sweet-square-pro, sans-serif;
+}
+
+.tagline{
+  padding-top: 5rem;
+  font: normal 400 1.8rem sweet-square-pro, sans-serif;
+  margin: 0;
+}
+
+.section{
+  margin: 7% 0;
+}
+
+.row>*:not(:last-child){
+	margin-bottom: 7%;
+}
+img{
+  max-width: 100%;
+}
+
+.row {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"]{
+  float: none;
+}
+
+.about--box{
+  width: 75%;
+  margin: 0 auto;
+  padding: 5%;
+  background: rgb(214, 214, 214);
+}
+
+.image-container{
+  width: 85%;
+  padding: 5% 0 10%;
+  margin: 0 auto;
+}
+
+
+h2{
+  font: normal 400 2.5rem sweet-square-pro, sans-serif;
+  line-height: 2.5rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  color: rgb(24, 49, 91);
+}
+
+p{
+  font: normal 400 1.7rem mr-eaves-xl-modern, sans-serif;
+  line-height: 2.3rem;
+}
+.decoration-container {
+  position: relative;
+  padding-bottom: 20%;
+}
+
+.decoration-container--two{
+  display:none;
+}
+
+.decoration {
+    position: absolute;
+    right: -20px;
+}
+
+.featured{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-box{
+  width: 28rem;
+  height: 40rem;
+  border: 1px solid rgb(255, 214, 97);
+  padding: 5% 3%;
+  text-align: center;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.feature-box:hover{
+  border: 1px solid rgba(24, 49, 91);
+  transition: .2s ease-in;
+}
+
+a.box-links:link, a.box-links:visited{
+  color: rgb(187, 156, 68);
+  text-decoration: none;
+  font: normal 400 2rem sweet-square-pro, sans-serif;
+  cursor: pointer;
+  letter-spacing: .1rem;
+}
+
+
+h3{
+  font: normal 400 2.3rem sweet-square-pro, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(24, 49, 91);
+}
+.feature-box--icon {
+  font-size: 5rem;
+  margin:1.5rem auto;
+  background-image: linear-gradient(to right, rgba(24, 49, 91), rgba(24, 49, 91, 0.8));
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.text {
+    font: normal 400 4rem sweet-square-pro, sans-serif;
+    text-align: center;
+    color: rgb(24, 49, 91);
+}
+
+.button {
+    margin: 3rem auto;
+    display: block;
+    background: rgb(24, 49, 91);
+    width: 20rem;
+    text-align: center;
+    color: red;
+    padding: 2rem 1.5rem;
+    font: normal 400 1.7rem sweet-square-pro, sans-serif;
+}
+
+a.button:link, a.button:visited{
+  font: normal 400 1.7rem sweet-square-pro, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: rgb(255, 214, 97);
+}
+
+.footer-container{
+  background:rgb(214, 214, 214);
+}
+
+.footer-container ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a.footer-links:link, a.footer-links:visited{
+  font: normal 400 1.6rem sweet-square-pro, sans-serif;
+  color: rgb(24, 49, 91);
+}
 /****************************
         MEDIA QUERIES
 ****************************/
 
+@media(min-width: 500px){
+  h1{
+    font: normal 400 5rem sweet-square-pro, sans-serif;
+  }
+
+  .tagline{
+    padding-top: 4rem;
+    font: normal 400 2.8rem sweet-square-pro, sans-serif;
+  }
+}
+
+@media(min-width: 702px){
+
+  .header_textbox{
+    top: 25%;
+  }
+
+  h1{
+    font: normal 400 6rem sweet-square-pro, sans-serif;
+  }
+
+  .tagline{
+    padding-top: 4rem;
+    font: normal 400 3rem sweet-square-pro, sans-serif;
+  }
+
+  .row{
+    display: block;
+    max-width: 95%;
+  }
+
+  .row [class^="col-"]:not(:last-child){
+    margin-right: 7rem; }
+
+  .row [class^="col-"]{
+    float: left;
+  }
+
+  .row .col-1-of-2 {
+    width: calc((100% - 7rem) / 2);
+  }
+
+  .row:not(:last-child){
+    margin-bottom: 8rem;
+  }
+  .about--box{
+    max-width: 100%;
+    width: 100%;
+  }
+  .image-container{
+    width: 100%;
+    padding: 0;
+    position: relative;
+  }
+
+  .image-container img{
+    position: absolute;
+    top: 15rem;
+  }
+
+  .decoration-container{
+    display: none;
+  }
+
+  .decoration-container--two{
+    display: block;
+    position: relative;
+    top: 35rem;
+    right: 29rem;
+    z-index: -99;
+  }
+
+  .featured{
+    margin: 25% 0 7%;
+  }
+}
+
+@media (min-width: 829px){
+  .decoration-container--two{
+    top: 35rem;
+    right: 35rem;
+  }
+  .image-container img{
+    position: absolute;
+    top: 10rem;
+  }
+  .featured{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .feature-box{
+    margin: 2%;
+    padding: 3% 2%;
+  }
+}
+
 @media(min-width: 942px){
+
+  html{
+    font-size: 75%;
+  }
 
   .logo{
     max-width: 80%;
@@ -200,8 +482,9 @@ li a:link, a:visited{
     padding: 5% 2% 1% 0;
   }
 
-  li a:link, a:visited{
+ li a.desktop-links:link, a.desktop-link:visited{
     font-size: 2rem;
+    color: rgb(24, 49, 91);
   }
 
   li:not(:last-child){
@@ -215,6 +498,34 @@ li a:link, a:visited{
     flex-basis: 70%;
     justify-content: flex-end;
   }
+
+  .header_textbox{
+    top: 30%;
+  }
+
+  .image-container img{
+    position: absolute;
+    top: 10rem;
+  }
+
+  .row [class^="col-"]:not(:last-child){
+    margin-right: 8rem; }
+
+  .row [class^="col-"]{
+    float: left;
+  }
+
+  .row .col-1-of-2 {
+    width: calc((100% - 8rem) / 2);
+  }
+
+  .decoration-container--two{
+    display: block;
+    position: relative;
+    top: 35rem;
+    right: 30rem;
+    z-index: -99;
+  }
 }
 
 @media (min-width: 1199px){
@@ -222,7 +533,18 @@ li a:link, a:visited{
     max-width: 100%;
   }
 
-  li a:link, a:visited{
+  li a.desktop-links:link,
+  li a.desktop-links:visited{
     font-size: 2.7rem;
+  }
+
+  h1{
+    font: normal 400 6.5rem sweet-square-pro, sans-serif;
+    line-height: 7.5rem;
+  }
+
+  .tagline{
+    padding-top: 4rem;
+    font: normal 400 4rem sweet-square-pro, sans-serif;
   }
 }
