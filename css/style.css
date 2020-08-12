@@ -258,7 +258,7 @@ p{
   padding-bottom: 20%;
 }
 
-.decoration-container--two{
+.decoration-container--two, .decoration-container--three{
   display:none;
 }
 
@@ -446,10 +446,11 @@ a.footer-links:link, a.footer-links:visited{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20%;
   }
-  .feature-box{
-    margin: 2%;
-    padding: 3% 2%;
+  .feature-box {
+      margin: 1%;
+      padding: 2% 2%;
   }
 }
 
@@ -520,22 +521,26 @@ a.footer-links:link, a.footer-links:visited{
   }
 
   .decoration-container--two{
-    display: block;
-    position: relative;
     top: 35rem;
-    right: 30rem;
-    z-index: -99;
+    right: 32rem;
   }
 }
 
-@media (min-width: 1199px){
+@media(min-width: 1050px){
+  .decoration-container--two{
+    top: 35rem;
+    right: 35rem;
+  }
+}
+
+@media(min-width: 1199px){
   .logo{
     max-width: 100%;
   }
 
   li a.desktop-links:link,
   li a.desktop-links:visited{
-    font-size: 2.7rem;
+    font-size: 2.3rem;
   }
 
   h1{
@@ -546,5 +551,25 @@ a.footer-links:link, a.footer-links:visited{
   .tagline{
     padding-top: 4rem;
     font: normal 400 4rem sweet-square-pro, sans-serif;
+  }
+
+}
+
+@media(min-width: 1350px){
+  .about{
+    max-width: 90rem;
+    margin: 10% auto 7%;
+  }
+
+  .about--box{
+    position: relative;
+  }
+
+  .decoration-container--three{
+    display: block;
+    position: absolute;
+    z-index: -99;
+    top: -18rem;
+    left: -8rem;
   }
 }
