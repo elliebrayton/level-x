@@ -48,6 +48,51 @@ url("./fonts/icofont.woff") format("woff");
   content: "\eade";
 }
 
+.icofont-people:before
+{
+  content: "\ecf9";
+}
+
+.icofont-briefcase-2:before
+{
+  content: "\e967";
+}
+
+.icofont-black-board:before
+{
+  content: "\ead0";
+}
+
+.icofont-building-alt:before
+{
+  content: "\e98a";
+}
+
+.icofont-brainstorming:before
+{
+  content: "\ead3";
+}
+
+.icofont-life-buoy:before
+{
+  content: "\ef68";
+}
+
+.icofont-ui-chat:before
+{
+  content: "\ec4a";
+}
+
+.icofont-beaker:before
+{
+  content: "\eeb5";
+}
+
+.icofont-megaphone:before
+{
+  content: "\ef91";
+}
+
 .icofont-xs
 {
   font-size: .5em;

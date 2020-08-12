@@ -40,6 +40,15 @@ a:link, a:visited{
   position: relative;
 }
 
+
+.header{
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(24, 49, 91, 0.53), rgba(24, 49, 91, 0.71)), url(../images/blue_angels_fat_albert.jpg);
+  background-size: cover;
+  background-position: 85% 40%;;
+  background-repeat: no-repeat;
+  position: relative;
+}
 .navigation{
   background: white;
   background: rgba(255, 255, 255, 0.7);
@@ -229,11 +238,46 @@ img{
   background: rgb(214, 214, 214);
 }
 
-.image-container{
+.image-container, .image-container--two{
   width: 85%;
   padding: 5% 0 10%;
   margin: 0 auto;
 }
+
+.services--box{
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 5%;
+  background: rgb(214, 214, 214);
+}
+
+.composition{
+  max-width: 85%;
+  padding: 5% 0 10%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.composition_photo {
+  width: 70%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 10;
+  transition: all .2s;
+  outline-offset: 2rem;
+}
+  .composition_photo--one {
+    left: -5rem;
+    top: -5rem;
+  }
+  .composition_photo--two {
+    right:0;
+    top: 2rem;
+  }
+  .composition_photo--three {
+    left: 10%;
+    top: 15rem;
+  }
 
 
 h2{
@@ -284,6 +328,22 @@ p{
   transition: .2s ease-in;
 }
 
+.services-box{
+  width: 28rem;
+  height: auto;
+  border: 1px solid rgb(255, 214, 97);
+  padding: 5% 3%;
+  text-align: center;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.services-box:hover{
+  border: 1px solid rgba(24, 49, 91);
+  transition: .2s ease-in;
+}
+
 a.box-links:link, a.box-links:visited{
   color: rgb(187, 156, 68);
   text-decoration: none;
@@ -300,6 +360,15 @@ h3{
   color: rgb(24, 49, 91);
 }
 .feature-box--icon {
+  font-size: 5rem;
+  margin:1.5rem auto;
+  background-image: linear-gradient(to right, rgba(24, 49, 91), rgba(24, 49, 91, 0.8));
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.services-box--icon {
   font-size: 5rem;
   margin:1.5rem auto;
   background-image: linear-gradient(to right, rgba(24, 49, 91), rgba(24, 49, 91, 0.8));
@@ -356,6 +425,19 @@ a.footer-links:link, a.footer-links:visited{
   font: normal 400 1.6rem sweet-square-pro, sans-serif;
   color: rgb(24, 49, 91);
 }
+
+.utility-padding-bottom{
+  margin-bottom: 2rem;
+}
+
+.composition{
+  display: none;
+}
+
+.utility-margin-top{
+  margin-top: 0 !important;
+}
+
 /****************************
         MEDIA QUERIES
 ****************************/
@@ -407,14 +489,14 @@ a.footer-links:link, a.footer-links:visited{
   }
 
   .row [class^="col-"]:not(:last-child){
-    margin-right: 7rem; }
+    margin-right: 3rem; }
 
   .row [class^="col-"]{
     float: left;
   }
 
   .row .col-1-of-2 {
-    width: calc((100% - 7rem) / 2);
+    width: calc((100% - 3rem) / 2);
   }
 
   .row:not(:last-child){
@@ -422,12 +504,19 @@ a.footer-links:link, a.footer-links:visited{
   }
   .about--box{
     max-width: 100%;
-    width: 100%;
+  }
+
+  .services--box{
+    max-width: 100%;
   }
   .image-container{
     width: 100%;
     padding: 0;
     position: relative;
+  }
+
+  .composition{
+    max-width: 100%;
   }
 
   .image-container img{
@@ -442,13 +531,17 @@ a.footer-links:link, a.footer-links:visited{
   .decoration-container--two{
     display: block;
     position: relative;
-    top: 35rem;
+    top: 40rem;
     right: 29rem;
     z-index: -99;
   }
 
   .featured{
     margin: 25% 0 7%;
+  }
+
+  .image-container--two{
+    position: relative;
   }
 }
 
@@ -467,7 +560,7 @@ a.footer-links:link, a.footer-links:visited{
     justify-content: center;
   }
   .feature-box {
-      margin: 1%;
+      margin: 2% 2% 6%;
       padding: 2% 2%;
   }
 
@@ -583,13 +676,27 @@ a.footer-links:link, a.footer-links:visited{
     font: normal 400 4rem sweet-square-pro, sans-serif;
   }
 
-}
+  .decoration-container--two{
+    top: 35rem;
+    right: 35rem;
+  }
 
-@media(min-width: 1350px){
   .about{
     max-width: 90rem;
     margin: 10% auto 7%;
   }
+
+  .composition{
+    display: block;
+  }
+
+  .image-container--two{
+    display: none;
+  }
+
+}
+
+@media(min-width: 1350px){
 
   .about--box{
     position: relative;
