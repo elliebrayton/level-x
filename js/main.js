@@ -8,11 +8,17 @@ $('body').toggleClass('overflow');
 
 var height = $('header').height();
 
-$(window).scroll(function(){
-  if($(this).scrollTop() > height){
-  $('navigation').addClass('color');
-  } else{
-  $('navigation').removeClass('fixed');
-}
-}
-);
+
+  $("#header").backstretch([
+  "/images/blue_angels_fat_albert.jpg",
+  "/images/military.jpg",
+  "/images/military-men-departing-service-uniform-40820-450x300.jpeg"
+], {
+  duration: 1200,
+  fade: 800,
+  overlay: {
+    init: true,
+    background: "rgba(24, 49, 91)",
+    opacity: 0.71
+  }
+});

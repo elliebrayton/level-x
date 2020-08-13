@@ -17,31 +17,37 @@
   <!-- START BODY -->
 	<body>
     <header class="landing_page--header" id="header">
-      <nav class="navigation">
+			<nav class="navigation-mobile">
         <div class="logo-container">
-          <img src="images/LX_logo.png" alt="level-x_logo" class="logo">
+          <a href="index.html"><img src="images/LX_logo.png" alt="level-x_logo" class="logo"></a>
         </div>
         <div class="burger">
           <span></span>
         </div>
-        <ul class="mobile mobile-menu">
-          <li class="mobile-links"><a href="#">About</a></li>
-          <li class="mobile-links"><a href="#">Training & Education</a></li>
-          <li class="mobile-links"><a href="#">Services</a></li>
-          <li class="mobile-links"><a href="#">Logistics</a></li>
-          <li class="mobile-links"><a href="#">Contacts</a></li>
-        </ul>
-        <ul class="desktop">
-          <li><a class="desktop-links" href="#">About</a></li>
-          <li><a class="desktop-links" href="#">Training & Education</a></li>
-          <li><a class="desktop-links" href="#">Services</a></li>
-          <li><a class="desktop-links" href="#">Logistics</a></li>
-          <li><a class="desktop-links" href="#">Contacts</a></li>
-        </ul>
-      </nav>
+				<ul class="mobile mobile-menu">
+					<li class="mobile-links"><a href="#">About</a></li>
+					<li class="mobile-links"><a href="#">Training & Education</a></li>
+					<li class="mobile-links"><a href="services.html">Services</a></li>
+					<li class="mobile-links"><a href="#">Logistics</a></li>
+					<li class="mobile-links"><a href="contact.html">Contacts</a></li>
+				</ul>
+				</nav>
+				<nav class="navigation-desktop">
+					<div class="logo-container">
+	          <a href="index.html"><img src="images/LX_logo.png" alt="level-x_logo" class="logo"></a>
+	        </div>
+					<ul class="desktop">
+						<li><a class="desktop-links" href="#">About</a></li>
+						<li><a class="desktop-links" href="#">Training & Education</a></li>
+						<li><a class="desktop-links" href="services.html">Services</a></li>
+						<li><a class="desktop-links" href="#">Logistics</a></li>
+						<li><a class="desktop-links" href="contact.html">Contacts</a></li>
+					</ul>
+				</nav>
       <div class="header_textbox">
-        <h1>OUR SERVICES</h1>
+        <h1>Our Services</h1>
       </div>
+						<a href="#" class="scroll"><span></span></a>
     </header>
     <main>
       <section class="section about">
@@ -67,19 +73,49 @@
 				</div>
           </div>
       </section>
-      <section class="section featured utility-margin-top">
+      <section class="section featured utility-margin-top utility-max-width">
+				<h2 class="offerings">Offerings</h2>
         <div class="services-box">
-          <div class="upper">
-            <h3>Training</h3>
-            <i class="services-box--icon icofont-world"></i>
-          </div>
-          <p><a class="box-links" href="#">Learn More</a></p>
+            <h3>Barrier Removal Teams</h3>
+            <i class="services-box--icon icofont-people"></i>
         </div>
+				<div class="services-box">
+						<h3>Program Management Support</h3>
+						<i class="services-box--icon icofont-life-buoy"></i>
+				</div>
+				<div class="services-box">
+						<h3>Administrative Management</h3>
+						<i class="services-box--icon icofont-megaphone"></i>
+				</div>
+				<div class="services-box">
+						<h3>General Management Consulting</h3>
+						<i class="services-box--icon icofont-ui-chat"></i>
+				</div>
+				<div class="services-box">
+						<h3>Business Support Services</h3>
+						<i class="services-box--icon icofont-briefcase-2"></i>
+				</div>
+				<div class="services-box">
+						<h3>Facilities Support Services</h3>
+						<i class="services-box--icon icofont-building-alt"></i>
+				</div>
+				<div class="services-box">
+						<h3>Research & Development</h3>
+						<i class="services-box--icon icofont-black-board"></i>
+					<p>Physical, Engineering, & Life Sciences</p>
+				</div>
+				<div class="services-box">
+						<h3>Scientific & Technical Consulting</h3>
+						<i class="services-box--icon icofont-beaker"></i>
+				</div>
       </section>
-      <section class="section">
-        <p class="text">DUNS</p>
-        <p class="text">080998914</p>
-        <a class="button" href="#">Learn More</a>
+      <section class="section more">
+				<div class="more-container">
+					<p class="text">NAICS</p>
+					<p class="text">541611/541614/541690</p>
+					<p class="text">/561110/541990</p>
+					<a class="button" href="#">Logistics</a>
+				</div>
       </section>
       <footer class="footer">
         <div class="footer-container">
@@ -89,14 +125,15 @@
           <ul>
             <li><a class="footer-links" href="#">About</a></li>
             <li><a class="footer-links" href="#">Training & Education</a></li>
-            <li><a class="footer-links" href="#">Services</a></li>
+            <li><a class="footer-links" href="services.html">Services</a></li>
             <li><a class="footer-links" href="#">Logistics</a></li>
-            <li><a class="footer-links" href="#">Contacts</a></li>
+            <li><a class="footer-links" href="contact.html">Contacts</a></li>
             <li><a class="footer-links" href="#">Careers</a></li>
           </ul>
         </div>
       </footer>
     </main>
+		<script src="js/backstretch.js"></script>
     <script src="js/main.js"></script>
 	</body>
   <!-- END BODY -->
