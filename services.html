@@ -10,26 +10,29 @@
     <link type="text/css" rel="stylesheet" href="icofont.min.css">
     <!-- FONTS -->
     <link rel="stylesheet" href="https://use.typekit.net/wvo2pey.css">
+		<!-- FAVICON -->
+		<link rel="icon" type="image/png" href="images/favicon.png">
 		<!-- JQUERY -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
   <!-- END HEAD -->
   <!-- START BODY -->
 	<body>
+		<!--START HEADER -->
     <header class="landing_page--header" id="header">
 			<nav class="navigation-mobile">
-        <div class="logo-container">
+				<div class="logo-container">
           <a href="index.html"><img src="images/LX_logo.png" alt="level-x_logo" class="logo"></a>
         </div>
         <div class="burger">
           <span></span>
         </div>
 				<ul class="mobile mobile-menu">
-					<li class="mobile-links"><a href="#">About</a></li>
-					<li class="mobile-links"><a href="#">Training & Education</a></li>
-					<li class="mobile-links"><a href="services.html">Services</a></li>
-					<li class="mobile-links"><a href="#">Logistics</a></li>
-					<li class="mobile-links"><a href="contact.html">Contacts</a></li>
+					<li><a class="mobile-links" href="#">About</a></li>
+					<li><a class="mobile-links" href="#">Training & Education</a></li>
+					<li><a class="mobile-links" href="services.html">Services</a></li>
+					<li><a class="mobile-links" href="#">Logistics</a></li>
+					<li><a class="mobile-links" href="contact.html">Contacts</a></li>
 				</ul>
 				</nav>
 				<nav class="navigation-desktop">
@@ -37,28 +40,26 @@
 	          <a href="index.html"><img src="images/LX_logo.png" alt="level-x_logo" class="logo"></a>
 	        </div>
 					<ul class="desktop">
-						<li><a class="desktop-links" href="#">About</a></li>
-						<li><a class="desktop-links" href="#">Training & Education</a></li>
-						<li><a class="desktop-links" href="services.html">Services</a></li>
-						<li><a class="desktop-links" href="#">Logistics</a></li>
-						<li><a class="desktop-links" href="contact.html">Contacts</a></li>
+						<li><a class="desktop-links hover-3" href="#">About</a></li>
+						<li><a class="desktop-links hover-3" href="#">Training & Education</a></li>
+						<li><a class="desktop-links hover-3" href="services.html">Services</a></li>
+						<li><a class="desktop-links hover-3" href="#">Logistics</a></li>
+						<li><a class="desktop-links hover-3" href="contact.html">Contact</a></li>
 					</ul>
 				</nav>
       <div class="header_textbox">
-        <h1>Our Services</h1>
+        <h1>OUR SERVICES</h1>
       </div>
-						<a href="#" class="scroll"><span></span></a>
+						<a href="#main" class="scroll"><span></span></a>
     </header>
-    <main>
+    <main id="main">
       <section class="section about">
         <div class="row">
 					<div class="col-1-of-2">
 						<div class="services--box">
 							<h2>Good is not good enough</h2>
-							<p class="utility-padding-bottom">Level X possesses a talent-edge, encompassing the best and brightest personnel cultivated from academia, government, and industry in various fields with a lineage of support to both DoD and non-DoD organizations.</p>
-							<p>
-								Level X combines the subject matter expertise and systems driven processes acquired over decades of performance to assist our clients in an unrelenting drive towards excellency. For Level X, we bring a wide-range of services to our customers by focusing on timely execution in a deliberate manner through our expertise in project management, staffing, and training.
-							</p>
+								<p class="utility-padding-bottom">Level X possesses a talent-edge, encompassing the best and brightest personnel cultivated from academia, government, and industry in various fields with a lineage of support to both DoD and non-DoD organizations.</p>
+								<p>Level X combines the subject matter expertise and systems driven processes acquired over decades of performance to assist our clients in an unrelenting drive towards excellency. For Level X, we bring a wide-range of services to our customers by focusing on timely execution in a deliberate manner through our expertise in project management, staffing, and training.</p>
 						</div>
 				</div>
 				<div class="col-1-of-2">
@@ -117,6 +118,7 @@
 					<a class="button" href="#">Logistics</a>
 				</div>
       </section>
+			<!-- START FOOTER -->
       <footer class="footer">
         <div class="footer-container">
           <div class="small-logo-container">
@@ -132,7 +134,10 @@
           </ul>
         </div>
       </footer>
+			<!-- END FOOTER -->
     </main>
+		<!-- END MAIN -->
+		<!-- SCRIPTS -->
 		<script src="js/backstretch.js"></script>
     <script src="js/main.js"></script>
 	</body>

@@ -10,7 +10,7 @@ Cark Yellow: rgb(187, 156, 68)
 *{
   margin: 0;
   padding: 0;
-  border-box: 0;
+  box-sizing: 0;
 }
 
 html {
@@ -21,6 +21,10 @@ html {
 body{
   font: normal 400 1.2rem mr-eaves-xl-modern, sans-serif;
   overflow-x:hidden;
+}
+
+#main{
+  padding-top: 7%;
 }
 
 a:link, a:visited{
@@ -45,19 +49,22 @@ a:link, a:visited{
 }
 }
 
-/****************************
-        LANDING PAGE
-****************************/
-
 .landing_page--header{
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(24, 49, 91, 0.53), rgba(24, 49, 91, 0.71)), url(../images/blue_angels_fat_albert.jpg);
-  background-size: cover;
-  background-position: 85% 40%;;
-  background-repeat: no-repeat;
   position: relative;
 }
 
+.landing_page--header::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right bottom, rgba(24, 49, 91, 0.53), rgba(24, 49, 91, 0.71));
+  opacity: .71;
+  z-index: -1;
+}
 
 .header{
   height: 100vh;
@@ -75,11 +82,6 @@ a:link, a:visited{
   display: block;
 }
 
-ul .desktop{
-  list-style: none;
-  padding: 5% 5% 5% 0;
-}
-
 .mobile{
   display: flex;
   color: white;
@@ -91,6 +93,7 @@ ul .desktop{
   width: 100%;
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 }
 
 
@@ -106,6 +109,14 @@ li a:link, a:visited{
   text-decoration: none;
   font-family: sweet-square-pro, sans-serif;
   font-size: 2.5rem;
+}
+
+li a.mobile-links:link,
+li a.mobile-links:visited{
+  font-family: sweet-square-pro, sans-serif;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  color: white;
 }
 .burger {
   width: 7rem;
@@ -217,13 +228,12 @@ h1{
 }
 
 .tagline{
-  padding-top: 5rem;
+  padding-top: 3rem;
   font: normal 400 1.8rem sweet-square-pro, sans-serif;
   margin: 0;
   animation: fadein 3s;
 }
 
-/* scroll */
 .scroll {
   position: absolute; bottom: 20px; left: 50%;
   transform: translatex(-50%);
@@ -236,13 +246,9 @@ h1{
 }
 .scroll:hover {opacity:.5;}
 
-
-#header a {
-  padding-top: 70px;
-}
 #header a span {
   position: absolute;
-  top: 0;
+  top: -8rem;
   left: 50%;
   width: 40px;
   height: 65px;
@@ -271,10 +277,6 @@ h1{
   100% {opacity: 0;}
 }
 
-.section{
-  margin: 7% 0;
-}
-
 .row>*:not(:last-child){
 	margin-bottom: 7%;
 }
@@ -299,7 +301,7 @@ img{
 }
 
 .about--box{
-  width: 75%;
+  max-width: 75%;
   margin: 0 auto;
   padding: 5%;
   background: rgb(214, 214, 214);
@@ -376,10 +378,10 @@ p{
 
 .featured{
   display: flex;
-      flex-direction: row;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .feature-box{
@@ -402,15 +404,15 @@ p{
 }
 
 .services-box {
-    width: 20rem;
-    height: 17rem;
-    border: 1px solid rgb(255, 214, 97);
-    padding: 2rem 1rem;
-    text-align: center;
-    margin-bottom: 7%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  width: 20rem;
+  height: 17rem;
+  border: 1px solid rgb(255, 214, 97);
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-bottom: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .services-box:not(:last-child){
@@ -424,9 +426,7 @@ a.box-links:link, a.box-links:visited{
   cursor: pointer;
   letter-spacing: .1rem;
 }
-a.desktop-links:link{
-  color: red;
-}
+
 
 h3{
   font: normal 400 2.3rem sweet-square-pro, sans-serif;
@@ -481,12 +481,12 @@ h3{
   transform: translateY(0px); }
 }
 
-a.button:link, a.button:visited{
+.button:link, .button:visited{
   font: normal 400 1.7rem sweet-square-pro, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  color: rgb(255, 214, 97);
+  color: rgb(255, 214, 97)!important;
 }
 
 .footer-container {
@@ -580,9 +580,65 @@ input, select, textarea{
   display: none;
 }
 
+.locations{
+  background: rgb(24, 49, 91);
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.locations img{
+  animation: fadein 2s;
+}
+
+.locations h2{
+  color:white;
+  padding-bottom: 5%;
+}
+
+a, a > span {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  line-height: 24px;
+}
+a:before, a:after, a > span:before, a > span:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+.contact h2{
+  text-align: center;
+}
+
+.hover-3 {
+  display: inline-flex;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.hover-3:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: rgb(255, 214, 97);
+  transform: translateX(-100%);
+}
+.hover-3:hover:before {
+  transform: translateX(0);
+}
 /****************************
         MEDIA QUERIES
 ****************************/
+
+@media(min-width: 300px) and (max-width:550px){
+  #header a span{
+    top: -25rem;
+  }
+}
 
 @media(min-width: 500px){
   h1{
@@ -590,7 +646,7 @@ input, select, textarea{
   }
 
   .tagline{
-    padding-top: 4rem;
+    padding-top: 3rem;
     font: normal 400 2.8rem sweet-square-pro, sans-serif;
   }
 
@@ -634,7 +690,7 @@ input, select, textarea{
   }
 
   .tagline{
-    padding-top: 4rem;
+    padding-top: 3rem;
     font: normal 400 3rem sweet-square-pro, sans-serif;
   }
 
@@ -805,10 +861,6 @@ input, select, textarea{
     padding: 5% 2% 1% 0;
   }
 
-  .header_textbox{
-    top: 30%;
-  }
-
   .image-container img{
     position: absolute;
     top: 10rem;
@@ -855,8 +907,8 @@ input, select, textarea{
   }
 
   .tagline{
-    padding-top: 4rem;
-    font: normal 400 4rem sweet-square-pro, sans-serif;
+    padding-top: 3rem;
+    font: normal 400 3rem sweet-square-pro, sans-serif;
   }
 
   .decoration-container--two{
@@ -866,7 +918,7 @@ input, select, textarea{
 
   .about{
     max-width: 90rem;
-    margin: 10% auto 7%;
+    margin: 0 auto;
   }
 
   .composition{

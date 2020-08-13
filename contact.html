@@ -10,12 +10,15 @@
     <link type="text/css" rel="stylesheet" href="icofont.min.css">
     <!-- FONTS -->
     <link rel="stylesheet" href="https://use.typekit.net/wvo2pey.css">
+		<!-- FAVICON -->
+		<link rel="icon" type="image/png" href="images/favicon.png">
 		<!-- JQUERY -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
   <!-- END HEAD -->
   <!-- START BODY -->
 	<body>
+		<!--START HEADER -->
     <header class="landing_page--header" id="header">
 			<nav class="navigation-mobile">
 				<div class="logo-container">
@@ -25,11 +28,11 @@
           <span></span>
         </div>
 				<ul class="mobile mobile-menu">
-					<li class="mobile-links"><a href="#">About</a></li>
-					<li class="mobile-links"><a href="#">Training & Education</a></li>
-					<li class="mobile-links"><a href="services.html">Services</a></li>
-					<li class="mobile-links"><a href="#">Logistics</a></li>
-					<li class="mobile-links"><a href="contact.html">Contact</a></li>
+					<li><a class="mobile-links" href="#">About</a></li>
+					<li><a class="mobile-links" href="#">Training & Education</a></li>
+					<li><a class="mobile-links" href="services.html">Services</a></li>
+					<li><a class="mobile-links" href="#">Logistics</a></li>
+					<li><a class="mobile-links" href="contact.html">Contacts</a></li>
 				</ul>
 				</nav>
 				<nav class="navigation-desktop">
@@ -37,20 +40,21 @@
 	          <a href="index.html"><img src="images/LX_logo.png" alt="level-x_logo" class="logo"></a>
 	        </div>
 					<ul class="desktop">
-						<li><a class="desktop-links" href="#">About</a></li>
-						<li><a class="desktop-links" href="#">Training & Education</a></li>
-						<li><a class="desktop-links" href="services.html">Services</a></li>
-						<li><a class="desktop-links" href="#">Logistics</a></li>
-						<li><a class="desktop-links" href="contact.html">Contact</a></li>
+						<li><a class="desktop-links hover-3" href="#">About</a></li>
+						<li><a class="desktop-links hover-3" href="#">Training & Education</a></li>
+						<li><a class="desktop-links hover-3" href="services.html">Services</a></li>
+						<li><a class="desktop-links hover-3" href="#">Logistics</a></li>
+						<li><a class="desktop-links hover-3" href="contact.html">Contact</a></li>
 					</ul>
 				</nav>
       <div class="header_textbox">
         <h1>Contact</h1>
       </div>
-						<a href="#" class="scroll"><span></span></a>
+						<a href="#main" class="scroll"><span class="scroll-span"></span></a>
     </header>
-    <main>
+    <main id="main">
 			<section class="contact">
+				<h2>Contact</h2>
 				<form>
 					<div class="form-section name">
 						<label>Your Name</label>
@@ -62,7 +66,8 @@
 						</div>
 						<div class="form-section interest">
 							<label>Interest</label>
-							<select id = "myList">
+							<select id = "myList" >
+								<option value="0" disabled selected>Select your interest</option>
 								<option value = "1">I am interesting in training</option>
 								<option value = "2">I am interesting in services</option>
 								<option value = "3">I am interesting in logistics</option>
@@ -78,6 +83,11 @@
 						<button class="button" type="submit"> Send Message</button>
 				</form>
 			</section>
+			<section class="locations">
+				<h2 class="white">Locations</h2>
+				<img src="images/map.png" alt="">
+			</section>
+			<!-- START FOOTER -->
       <footer class="footer">
         <div class="footer-container">
           <div class="small-logo-container">
@@ -86,14 +96,17 @@
           <ul>
             <li><a class="footer-links" href="#">About</a></li>
             <li><a class="footer-links" href="#">Training & Education</a></li>
-            <li><a class="footer-links" href="service.html">Services</a></li>
+            <li><a class="footer-links" href="services.html">Services</a></li>
             <li><a class="footer-links" href="#">Logistics</a></li>
-            <li><a class="footer-links" href="contact.html">Contact</a></li>
+            <li><a class="footer-links" href="contact.html">Contacts</a></li>
             <li><a class="footer-links" href="#">Careers</a></li>
           </ul>
         </div>
       </footer>
+			<!-- END FOOTER -->
     </main>
+		<!-- END MAIN -->
+		<!-- SCRIPTS -->
 		<script src="js/backstretch.js"></script>
     <script src="js/main.js"></script>
 	</body>
