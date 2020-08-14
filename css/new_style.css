@@ -10,7 +10,7 @@ Cark Yellow: rgb(187, 156, 68)
 *{
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  border-box: 0;
 }
 
 html {
@@ -49,21 +49,29 @@ a:link, a:visited{
 }
 }
 
+/****************************
+        LANDING PAGE
+****************************/
+
 .landing_page--header{
   height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(24, 49, 91, 0.53), rgba(24, 49, 91, 0.71)), url(../images/blue_angels_fat_albert.jpg);
+  background-size: cover;
+  background-position: 85% 40%;;
+  background-repeat: no-repeat;
   position: relative;
 }
 
 .landing_page--header::after{
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to right bottom, rgba(24, 49, 91, 0.53), rgba(24, 49, 91, 0.71));
-  opacity: .71;
-  z-index: -1;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: linear-gradient(to right bottom, rgba(24, 49, 91, 0.53), rgba(24, 49, 91, 0.71));
+opacity: .71;
+z-index: -1;
 }
 
 .header{
@@ -80,6 +88,11 @@ a:link, a:visited{
 .logo {
   max-width: 60%;
   display: block;
+}
+
+ul .desktop{
+  list-style: none;
+  padding: 5% 5% 5% 0;
 }
 
 .mobile{
@@ -115,8 +128,8 @@ li a.mobile-links:link,
 li a.mobile-links:visited{
   font-family: sweet-square-pro, sans-serif;
   font-size: 2.5rem;
-  line-height: 4rem;
   color: white;
+  line-height: 3.5rem;
 }
 .burger {
   width: 7rem;
@@ -234,6 +247,7 @@ h1{
   animation: fadein 3s;
 }
 
+/* scroll */
 .scroll {
   position: absolute; bottom: 20px; left: 50%;
   transform: translatex(-50%);
@@ -245,6 +259,8 @@ h1{
   transition: opacity .3s;
 }
 .scroll:hover {opacity:.5;}
+
+
 
 #header a span {
   position: absolute;
@@ -378,10 +394,10 @@ p{
 
 .featured{
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
 }
 
 .feature-box{
@@ -404,15 +420,15 @@ p{
 }
 
 .services-box {
-  width: 20rem;
-  height: 17rem;
-  border: 1px solid rgb(255, 214, 97);
-  padding: 2rem 1rem;
-  text-align: center;
-  margin-bottom: 7%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+    width: 20rem;
+    height: 17rem;
+    border: 1px solid rgb(255, 214, 97);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .services-box:not(:last-child){
@@ -634,9 +650,9 @@ a:before, a:after, a > span:before, a > span:after {
         MEDIA QUERIES
 ****************************/
 
-@media(min-width: 300px) and (max-width:550px){
+@media(min-width: 300px) and (max-width:400px){
   #header a span{
-    top: -25rem;
+    top: -20rem;
   }
 }
 
